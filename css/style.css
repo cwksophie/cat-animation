@@ -1,0 +1,176 @@
+#container {
+  margin: auto;
+  width: 276px;
+}
+
+.ear {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #E67300;
+  position: relative;
+  display: inline-block;
+}
+
+#left-ear {
+  transform: rotate(-30deg);
+  animation: left-ear-twitch 5s infinite;
+}
+
+#right-ear {
+  transform: rotate(30deg);
+  animation: right-ear-twitch 4s infinite;
+}
+
+#head {
+  width: 230px;
+  height: 220px;
+  background: #CC6600;
+  border-radius: 50%;
+  position: relative;
+  left: 23px;
+  bottom: 50px;
+}
+
+.eye {
+  width: 20px;
+  height: 40px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 70px;
+  animation: blink 8s infinite;
+}
+
+#left-eye {
+  left: 70px;
+}
+
+#right-eye {
+  left: 140px;
+}
+
+#nose {
+  width: 30px;
+  height: 20px;
+  background: #FF9966;
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  top: 130px;
+}
+
+#mouth {
+  position: absolute;
+  top: 150px;
+  left: 70px;
+}
+
+#line {
+  width: 3px;
+  height: 23px;
+  background-color: black;
+  position: absolute;
+  left: 43px;
+}
+
+.mouth-curve {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #CC6600;
+  border-style: solid;
+  border-width: 3px;
+}
+
+#curve-left {
+  border-color: transparent transparent black black;
+  transform: rotate(-45deg);
+}
+
+#curve-right {
+  border-left: 3px solid transparent;
+  border-right: 3px solid black;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid black;
+  left: 43px;
+  transform: rotate(45deg);
+}
+
+#tongue {
+  height: 30px;
+  width: 30px;
+  border-radius: 0 0 15px 15px;
+  background-color: pink;
+  position: absolute;
+  left: 29px;
+  top: 20px;
+  animation: stick-out-tongue 10s infinite;
+}
+
+@keyframes left-ear-twitch {
+  0%,
+  15% {
+    transform: rotate(-30deg);
+    left: 5px;
+  }
+  20% {
+    transform: rotate(-35deg);
+    left: 0px;
+  }
+  25%,
+  100% {
+    transform: rotate(-30deg);
+    left: 5px;
+  }
+}
+
+@keyframes right-ear-twitch {
+  0%,
+  75% {
+    transform: rotate(30deg);
+    left: 70px;
+  }
+  80% {
+    transform: rotate(35deg);
+    left: 75px;
+  }
+  85%,
+  100% {
+    transform: rotate(30deg);
+    left: 70px;
+  }
+}
+
+@keyframes blink {
+  0%,
+  45% {
+    height: 40px;
+    top: 70px;
+  }
+  48% {
+    height: 5px;
+    top: 105px;
+  }
+  50%,
+  100% {
+    height: 40px;
+    top: 70px;
+  }
+}
+
+@keyframes stick-out-tongue {
+  0%,
+  40% {
+    height: 0;
+  }
+  50% {
+    height: 30px;
+  }
+  60%,
+  100% {
+    height: 0;
+  }
+}
